@@ -1,0 +1,145 @@
+/* main variable for entire body */
+@bgimage: url('/img/bg/escher.png');
+@textcolor: #222;
+@mainfont: Helvetica;
+@topbarfont: 'Raleway', Helvetica, Arial, sans-serif;
+@headerfont: @topbarfont;
+@fontstyle: normal;
+@fontsize: 0.8em;
+@vmargin: 200px;
+
+/* variable which affect the main div content */
+@pagewidth: 400px;
+@contentbg: #F6F6F6;
+@contentpadding: 8px;
+@contentmargin: 4px;
+@contentmarginv: @contentmargin + @contentpadding;
+@bottomcornerradius: 10px;
+
+/* colors for content above main content div */
+@postbgcolor: #F3F3F3;
+@postbordercolor: #DDD;
+@postborderradius: 2px;
+@postborderwidth: 1px;
+@postpadding: 12px;
+
+@descriptionbgcolor: @postbgcolor;
+@descriptionbordercolor: @postbordercolor;
+@descriptionborderradius: @postborderradius;
+@descriptionborderwidth: @postborderwidth;
+
+/* text formatting */
+@textindent: 8px;
+
+/* hyperlinks */
+@linkcolor: #111;
+@blocklinkcolor: #EEE;
+@blocklinktextcolor: #000;
+@blocklinkpadding: 8px;
+@blocklinkbordercolor: #DDD;
+@blocklinkborderwidth: 1px;
+@blocklinkblur: 4px;
+
+/* tables */
+@tableborderwidth: 1px;
+@tablebordercolor: @postbgcolor - #444;
+@tablecellpadding: 0px;
+
+/* other */
+@rectangleovershoot: 16px;
+@rectangleheight: 32px;
+
+@navbarselectcolor: #222;
+@sumbitbuttonwidth: 16px;
+@searchbarheight: 20px;
+
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+}
+
+.border-bottom-right-radius (@radius: 5px) {
+  border-bottom-right-radius: @radius;
+}
+
+.border-bottom-left-radius (@radius: 5px) {
+  border-bottom-left-radius: @radius;
+}
+
+.box-shadow (@x: 0) {
+  box-shadow: @arguments;
+}
+
+body {
+    background-image:@bgimage;
+    color:@textcolor;
+    font-style:@fontstyle;
+    font-size:@fontsize;
+    font-family:@mainfont;
+    margin:@vmargin 0px;
+}
+
+#content {
+    width:@pagewidth;
+    background-color:@contentbg;
+    padding-left:@contentpadding;
+    padding-right:@contentpadding;
+    .border-radius(@bottomcornerradius);
+    .box-shadow(0px 0px 4px 0px #93e1ed);
+}
+
+input[type="text"] {
+/*    width:@pagewidth - @contentpadding;*/
+    margin:@contentmarginv 0px;
+    padding:0px;
+    width:@pagewidth - @contentpadding - @sumbitbuttonwidth;
+    height:@searchbarheight;
+}
+
+input[type="submit"] {
+	width:@sumbitbuttonwidth;
+	height:@searchbarheight + 5px;
+}
+
+.center {
+    margin:auto;
+    width:800px;
+}
+
+.title { 
+    text-align:center;
+    font-weight:normal; 
+    font-family: @topbarfont;
+    font-size:4em;
+    margin:0px;
+}
+
+.groove {
+    color:@contentbg;
+    height:1px;
+    padding:0px;
+    margin:0px @contentpadding 0px @contentpadding;
+    border:0px;
+    width:@pagewidth - @contentpadding * 2;
+    box-shadow:1px -1px 1px 0px #CCC;
+}
+
+table.homogenous {
+	table-layout: fixed;
+	width: @pagewidth;
+	margin:0px;
+	padding:0px;
+}
+
+td { 
+	padding-left:@tablecellpadding; 
+	padding-right:@tablecellpadding;
+}
+
+.tabledivider {
+	background: @tablebordercolor;
+}
+
+
+
+
+
