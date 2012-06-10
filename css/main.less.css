@@ -1,5 +1,4 @@
 /* main variable for entire body */
-@bgimage: url('/img/bg/escher.png');
 @textcolor: #222;
 @mainfont: Helvetica;
 @topbarfont: 'Raleway', Helvetica, Arial, sans-serif;
@@ -70,7 +69,6 @@
 }
 
 body {
-    background-image:@bgimage;
     color:@textcolor;
     font-style:@fontstyle;
     font-size:@fontsize;
