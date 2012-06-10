@@ -3,30 +3,21 @@
 /* colors for content above main content div */
 /* text formatting */
 /* hyperlinks */
-/* tables */
-/* other */
+/* input */
+/*@searchboxinsetcolor: #A2DFFF;*/
 body {
   color: #222222;
   font-style: normal;
   font-size: 0.8em;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   margin: 200px 0px;
 }
 #content {
   width: 400px;
-  background-color: #f6f6f6;
-  padding-left: 8px;
-  padding-right: 8px;
+  background-color: #fafafa;
+  padding: 8px;
   border-radius: 10px;
-  box-shadow: 0px 0px 4px 0px #93e1ed;
-}
-input[type="text"] {
-  /*    width:@pagewidth - @contentpadding;*/
-
-  margin: 12px 0px;
-  padding: 0px;
-  width: 392px;
-  height: 20px;
+  box-shadow: 0px 0px 4px 0px #a2dfff;
 }
 .center {
   margin: auto;
@@ -40,7 +31,7 @@ input[type="text"] {
   margin: 0px;
 }
 .groove {
-  color: #f6f6f6;
+  color: #fafafa;
   height: 1px;
   padding: 0px;
   margin: 0px 8px 0px 8px;
@@ -48,30 +39,48 @@ input[type="text"] {
   width: 384px;
   box-shadow: 1px -1px 1px 0px #cccccc;
 }
-table.homogenous {
-  table-layout: fixed;
-  width: 400px;
-  margin: 0px;
+form {
+  /*    width: @pagewidth - @contentpadding;*/
+
+  width: 100%;
   padding: 0px;
 }
-td {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.tabledivider {
-  background: #afafaf;
+/*input[type="text"] {
+    width:@pagewidth - @contentpadding;
+    margin:@contentmarginv 0px;
+    padding:0px;
+    display: block;
+
+    height:@searchbarheight;
+}*/
+input[type="text"] {
+  display: block;
+  padding: 6px;
+  border: solid 1px #e6e6e6;
+  /*    width: @pagewidth - @contentpadding - @searchboxborderwidth * 2;*/
+
+  width: 100%;
+  box-shadow: 0px 0px 2px 0px #a2dfff inset;
+  border-radius: 4px;
+  font-size: inherit;
+  font-family: inherit;
 }
 #shorturl {
-  border: 1px solid #dddddd;
+  border: 1px solid #e9e9e9;
   border-radius: 2px;
-  background: #F3F3F3;
-  padding: 12px;
-  width: 376px;
-  text-align: center;
+  background: #f8f8f8;
+  margin-top: 8px;
+  padding: 4px;
+  width: 390px;
+  text-align: right;
+  border-radius: 4px;
 }
 .hiddenhack {
   position: absolute;
   left: -9999px;
   height: 1px;
   width: 1px;
+}
+p {
+  margin: 4px;
 }

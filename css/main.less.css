@@ -1,6 +1,6 @@
 /* main variable for entire body */
 @textcolor: #222;
-@mainfont: Helvetica;
+@mainfont: Helvetica, Arial, sans-serif;
 @topbarfont: 'Raleway', Helvetica, Arial, sans-serif;
 @headerfont: @topbarfont;
 @fontstyle: normal;
@@ -9,48 +9,34 @@
 
 /* variable which affect the main div content */
 @pagewidth: 400px;
-@contentbg: #F6F6F6;
+@contentbg: #FAFAFA;
 @contentpadding: 8px;
 @contentmargin: 4px;
 @contentmarginv: @contentmargin + @contentpadding;
 @bottomcornerradius: 10px;
+@subcornerradius: 4px;
 
 /* colors for content above main content div */
-@postbgcolor: #F3F3F3;
-@postbordercolor: #DDD;
+@postbgcolor: #F7F7F7;
+@postbordercolor: @contentbg - #111;
 @postborderradius: 2px;
 @postborderwidth: 1px;
-@postpadding: 12px;
-
-@descriptionbgcolor: @postbgcolor;
-@descriptionbordercolor: @postbordercolor;
-@descriptionborderradius: @postborderradius;
-@descriptionborderwidth: @postborderwidth;
+@postpadding: 4px;
 
 /* text formatting */
 @textindent: 8px;
 
 /* hyperlinks */
 @linkcolor: #111;
-@blocklinkcolor: #EEE;
-@blocklinktextcolor: #000;
-@blocklinkpadding: 8px;
-@blocklinkbordercolor: #DDD;
-@blocklinkborderwidth: 1px;
-@blocklinkblur: 4px;
 
-/* tables */
-@tableborderwidth: 1px;
-@tablebordercolor: @postbgcolor - #444;
-@tablecellpadding: 0px;
-
-/* other */
-@rectangleovershoot: 16px;
-@rectangleheight: 32px;
-
-@navbarselectcolor: #222;
+/* input */
 @sumbitbuttonwidth: 16px;
 @searchbarheight: 20px;
+@searchboxborderwidth: 1px;
+@searchboxbordercolor: @postbgcolor - #111;
+/*@searchboxinsetcolor: #A2DFFF;*/
+@searchboxinsetcolor: #A2DFFF;
+@searchboxinsetlength: 2px;
 
 .border-radius (@radius: 5px) {
   border-radius: @radius;
@@ -79,18 +65,9 @@ body {
 #content {
     width:@pagewidth;
     background-color:@contentbg;
-    padding-left:@contentpadding;
-    padding-right:@contentpadding;
+    padding:@contentpadding;
     .border-radius(@bottomcornerradius);
-    .box-shadow(0px 0px 4px 0px #93e1ed);
-}
-
-input[type="text"] {
-/*    width:@pagewidth - @contentpadding;*/
-    margin:@contentmarginv 0px;
-    padding:0px;
-    width:@pagewidth - @contentpadding;
-    height:@searchbarheight;
+    .box-shadow(0px 0px 4px 0px @searchboxinsetcolor);
 }
 
 .center {
@@ -116,29 +93,42 @@ input[type="text"] {
     box-shadow:1px -1px 1px 0px #CCC;
 }
 
-table.homogenous {
-	table-layout: fixed;
-	width: @pagewidth;
-	margin:0px;
-	padding:0px;
+form {
+/*    width: @pagewidth - @contentpadding;*/
+    width:100%;
+    padding:0px;
 }
 
-td { 
-	padding-left:@tablecellpadding; 
-	padding-right:@tablecellpadding;
-}
+/*input[type="text"] {
+    width:@pagewidth - @contentpadding;
+    margin:@contentmarginv 0px;
+    padding:0px;
+    display: block;
 
-.tabledivider {
-	background: @tablebordercolor;
+    height:@searchbarheight;
+}*/
+
+input[type="text"]{
+    display: block;
+    padding:6px;
+    border: solid @searchboxborderwidth @searchboxbordercolor;
+/*    width: @pagewidth - @contentpadding - @searchboxborderwidth * 2;*/
+    width: 100%;
+    .box-shadow(0px 0px @searchboxinsetlength 0px @searchboxinsetcolor inset);
+    .border-radius(@subcornerradius);
+    font-size:inherit;
+    font-family:inherit;
 }
 
 #shorturl {
     border:@postborderwidth solid @postbordercolor;
         .border-radius(@postborderradius);
-    background:#F3F3F3;
+    background:@contentbg - #020202;
+    margin-top:@contentpadding;
     padding:@postpadding;
-    width: @pagewidth - @postpadding * 2;
-    text-align:center;
+    width: @pagewidth - @contentpadding - @searchboxborderwidth * 2;
+    text-align:right;
+    .border-radius(@subcornerradius);
 }
 
 .hiddenhack {
@@ -146,4 +136,8 @@ td {
     left:-9999px;
     height:1px;
     width:1px;
+}
+
+p {
+    margin: 4px;
 }
