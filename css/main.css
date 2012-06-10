@@ -1,0 +1,68 @@
+/* main variable for entire body */
+/* variable which affect the main div content */
+/* colors for content above main content div */
+/* text formatting */
+/* hyperlinks */
+/* tables */
+/* other */
+body {
+  background-image: url('/img/bg/escher.png');
+  color: #222222;
+  font-style: normal;
+  font-size: 0.8em;
+  font-family: Helvetica;
+  margin: 200px 0px;
+}
+#content {
+  width: 400px;
+  background-color: #f6f6f6;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px #93e1ed;
+}
+input[type="text"] {
+  /*    width:@pagewidth - @contentpadding;*/
+
+  margin: 12px 0px;
+  padding: 0px;
+  width: 376px;
+  height: 20px;
+}
+input[type="submit"] {
+  width: 16px;
+  height: 25px;
+}
+.center {
+  margin: auto;
+  width: 800px;
+}
+.title {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  margin: 0px;
+}
+.groove {
+  color: #f6f6f6;
+  height: 1px;
+  padding: 0px;
+  margin: 0px 8px 0px 8px;
+  border: 0px;
+  width: 384px;
+  box-shadow: 1px -1px 1px 0px #cccccc;
+}
+table.homogenous {
+  table-layout: fixed;
+  width: 400px;
+  margin: 0px;
+  padding: 0px;
+}
+td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.tabledivider {
+  background: #afafaf;
+}
