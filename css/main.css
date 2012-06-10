@@ -57,9 +57,7 @@ input[type="text"] {
   display: block;
   padding: 6px;
   border: solid 1px #e6e6e6;
-  /*    width: @pagewidth - @contentpadding - @searchboxborderwidth * 2;*/
-
-  width: 100%;
+  width: 386px;
   box-shadow: 0px 0px 2px 0px #a2dfff inset;
   border-radius: 4px;
   font-size: inherit;
