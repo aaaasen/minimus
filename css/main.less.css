@@ -89,13 +89,8 @@ input[type="text"] {
 /*    width:@pagewidth - @contentpadding;*/
     margin:@contentmarginv 0px;
     padding:0px;
-    width:@pagewidth - @contentpadding - @sumbitbuttonwidth;
+    width:@pagewidth - @contentpadding;
     height:@searchbarheight;
-}
-
-input[type="submit"] {
-	width:@sumbitbuttonwidth;
-	height:@searchbarheight + 5px;
 }
 
 .center {
@@ -137,7 +132,18 @@ td {
 	background: @tablebordercolor;
 }
 
+#shorturl {
+    border:@postborderwidth solid @postbordercolor;
+        .border-radius(@postborderradius);
+    background:#F3F3F3;
+    padding:@postpadding;
+    width: @pagewidth - @postpadding * 2;
+    text-align:center;
+}
 
-
-
-
+.hiddenhack {
+    position:absolute;
+    left:-9999px;
+    height:1px;
+    width:1px;
+}
