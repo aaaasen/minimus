@@ -45,6 +45,7 @@ def mkresultpage(srcfile):
           filebuf[i] = re.sub('#####', 's.devrandom.co/s/' + urlhash, filebuf[i])
           filebuf[i] = re.sub('<!--!!!!!', '', filebuf[i])
           filebuf[i] = re.sub('!!!!!-->', '', filebuf[i])
+          filebuf[i] = re.sub('''name="toshorten" value=""''', '''name="toshorten" value="''' + toshorten + '\"', filebuf[i])
           print filebuf[i]
 
      
